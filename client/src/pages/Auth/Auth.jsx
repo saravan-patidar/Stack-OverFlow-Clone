@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import "./Auth.css";
 import logo from "../../assets/Logo.png";
+import AboutAuth from '../Auth/AboutAuth'
 
 const Auth = () => {
   const [isSignup, setSignup] = useState(false);
@@ -11,16 +12,17 @@ const Auth = () => {
   };
   return (
     <section className="auth-section">
-      <div className="about-content">
-        <h2>Join the Stack overflow community</h2>
-        <p></p>
-      </div>
-
+      {isSignup && <AboutAuth />}
       <div className="container">
         {!isSignup && (
-          <img src={logo} alt="stack overflow" style={{ width: "100px" }} />
+          <img
+            src={logo}
+            className="auth-logo"
+            alt="stack overflow"
+            style={{ width: "60px" }}
+          />
         )}
-        <form>
+        <form className="auth_form">
           {isSignup ? (
             <label htmlFor="name">
               <h4>Display Name</h4>
@@ -34,18 +36,18 @@ const Auth = () => {
           <label htmlFor="password">
             <div className="pass">
               <h4>Password</h4>
-              {!isSignup ? <h4>forget password</h4> : null}
+              {!isSignup ? <p className="f-pass">forget password?</p> : null}
             </div>
             <input type="text" id="password" name="password " />
             {isSignup ? (
-              <p>
+              <p className="pass_des">
                 Passwords must contain at least eight characters, including at
                 least 1 letter and 1 number.
               </p>
             ) : null}
           </label>
           {isSignup && (
-            <label htmlFor="check">
+            <label className='notify' htmlFor="check">
               <input type="checkbox" id="check" name="check" />
               <p>
                 Opt-in to receive occasional product updates, user research
@@ -53,9 +55,11 @@ const Auth = () => {
               </p>
             </label>
           )}
-          <button type="submit">{isSignup ? "Sign up" : "Login"}</button>
+          <button type="submit" className="form_btn">
+            {isSignup ? "Sign up" : "Login"}
+          </button>
           {isSignup && (
-            <p>
+            <p className="toc">
               By clicking “Sign up”, you agree to our
               <span style={{ color: "#007ac6" }}>terms of service</span> and
               acknowledge that you have read and understand our
@@ -64,8 +68,8 @@ const Auth = () => {
             </p>
           )}
         </form>
-        <p>
-          {isSignup ? "already have an account " : "Don't have an account"}
+        <p className="account-text">
+          {isSignup ? "Already have an account " : "Don't have an account?"}
           <button
             type="button"
             className="handleSwitch_btn"

@@ -1,4 +1,116 @@
 .auth-section{
-    margin-top: 50px;
-    border: 2px solid red;
+    min-height: 100vh;
+    margin: 0% auto;
+    background-color: #e2e2e2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-auth{
+    width: 450px;
+    padding:10px 20px;
+    margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+.about-auth h1{
+    font-size: 28px;
+    font-weight: 500;
+    margin: 10px 0;
+}
+.about-auth p{
+    font-size: 20px;
+}
+.about-auth p:nth-last-child(2){
+    font-size: 15px;
+}
+.about-auth p:last-child{
+    color: #007ac6;
+    font-size: 15px;
+}
+.container{
+    margin-top: 60px;
+    padding: 20px;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.auth_form{
+    width:320px;
+    padding: 24px;
+    background-color: #fff;
+    border-radius: 10px;
+    text-transform: capitalize;
+    color:#141414;
+    box-shadow: 0 0 10px #dddd;
+} 
+.auth_form input{
+    width: 100%;
+    border: 1.5px solid gray;
+    border-radius: 4px;
+    padding: 5px;
+    margin: 4px 0;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+.auth_form h4{
+    font-weight: bold;
+    font-size: 20px;
+}
+.auth_form .pass{
+    display: flex;
+    justify-content: space-between;
+}
+.auth_form .f-pass{
+    color:#007ac6;
+    font-weight: 500;
+    font-size: small;
+    padding: 0 4px;
+    padding-top: 5px;
+}
+.auth_form .form_btn{
+    display: block;
+    border: none;
+    background-color: #007ac6;
+    color: #eee;
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    margin: 15px 0 8px 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+.form_btn:hover{
+    background-color: #146496;
+}
+.handleSwitch_btn{
+    border: none;
+    background-color: transparent;
+    color: #007ac6;
+    padding-inline: 5px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.pass_des{
+    font-size: 12px;
+    padding: 4px;
+    margin-bottom:6px ;
+}
+.notify input{
+    width: fit-content;
+    margin: 0;
+    margin-inline: 3px;
+}
+.notify p{
+    display: inline;
+    font-size: 14px;
+}
+.toc{
+    font-size: 14px;
+    padding: 6px;
 }
